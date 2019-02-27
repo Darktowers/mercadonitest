@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class products extends Model
+class Products extends Model
 {
     //
     protected $table    = 'products'; 
@@ -15,6 +15,6 @@ class products extends Model
 
     public function subProducts()
     {
-      return $this->hasMany( \App\Models\producsPackages::class, 'package_id' );
+      return $this->hasMany( \App\Models\ProductsPackages::class, 'package_id' );
     }
 }
